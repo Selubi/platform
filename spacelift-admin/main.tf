@@ -20,6 +20,7 @@ resource "spacelift_stack" "spacelift_admin" {
   repository                       = "platform"
   project_root                     = "spacelift-admin"
   terraform_version                = var.opentofu_version
+  terraform_workflow_tool          = var.terraform_workflow_tool
   autodeploy                       = true
   administrative                   = true
   terraform_smart_sanitization     = true
@@ -38,6 +39,7 @@ resource "spacelift_stack" "cloudflare_token_factory" {
   repository                       = "platform"
   project_root                     = "cloudflare-token-factory"
   terraform_version                = var.opentofu_version
+  terraform_workflow_tool          = var.terraform_workflow_tool
   administrative                   = true # To register created tokens as spacelift contexts
   autodeploy                       = true
   terraform_smart_sanitization     = true
