@@ -19,6 +19,7 @@ resource "spacelift_stack" "spacelift_admin" {
   branch                           = "main"
   repository                       = "platform"
   project_root                     = "spacelift-admin"
+  terraform_version                = var.opentofu_version
   autodeploy                       = true
   administrative                   = true
   terraform_smart_sanitization     = true
