@@ -42,7 +42,22 @@ resource "spacelift_stack" "cloudflare_admin" {
   autodeploy                       = true
   terraform_smart_sanitization     = true
   enable_well_known_secret_masking = true
-  protect_from_deletion            = true
+  administrative = true  # To manage and grant tokens to other cloudflare stacks
+  labels = ["folder:component/platform"]
+}
+
+resource "spacelift_stack" "cloudflare_token_factory" {
+  space_id                         = "root"
+  name                             = "cloudflare-admin"
+  description                      = "Stack to create additional cloudflare stacks and tokens"
+  branch                           = "main"
+  repository                       = "platform"
+  project_root                     = "cloudflare-token-factory"
+  terraform_version                = var.opentofu_version
+  terraform_workflow_tool          = var.terraform_workflow_tool
+  autodeploy                       = true
+  terraform_smart_sanitization     = true
+  enable_well_known_secret_masking = true
   administrative = true  # To manage and grant tokens to other cloudflare stacks
   labels = ["folder:component/platform"]
 }
