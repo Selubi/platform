@@ -64,7 +64,7 @@ resource "spacelift_mounted_file" "platform_config_tfvars_mounted" {
   context_id = spacelift_context.platform_config_vars.id
   # This path means the file will be at /mnt/workspace/config.tfvars
   relative_path = "config.tfvars"
-  content = file("${path.module}/../config.tfvars") # This reads your file from your Git repo
+  content = filebase64("${path.module}/../config.tfvars") # This reads your file from your Git repo
   write_only    = false
 }
 
