@@ -23,6 +23,7 @@ resource "spacelift_stack" "spacelift_admin" {
   branch                           = "main"
   repository                       = "platform"
   project_root                     = "spacelift-admin"
+  additional_project_globs         = var.spacelift_stack_additional_project_globs
   terraform_version                = var.spacelift_stack_terraform_version
   terraform_workflow_tool          = var.spacelift_stack_terraform_workflow_tool
   autodeploy                       = true
@@ -41,6 +42,7 @@ resource "spacelift_stack" "cloudflare_admin" {
   branch                           = "main"
   repository                       = "platform"
   project_root                     = "cloudflare-admin"
+  additional_project_globs         = var.spacelift_stack_additional_project_globs
   terraform_version                = var.spacelift_stack_terraform_version
   terraform_workflow_tool          = var.spacelift_stack_terraform_workflow_tool
   autodeploy                       = true
