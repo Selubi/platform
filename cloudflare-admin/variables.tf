@@ -1,7 +1,7 @@
 variable "spacelift_stack_terraform_version" {
   description = "OpenTofu version to use"
   type        = string
-  default     = "1.1"
+  default     = "1.10"
 }
 
 variable "spacelift_stack_terraform_workflow_tool" {
