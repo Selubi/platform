@@ -46,24 +46,9 @@ resource "spacelift_stack" "cloudflare_admin" {
   labels = ["folder:component/platform"]
 }
 
-resource "spacelift_stack" "cloudflare_token_factory" {
-  space_id                         = "root"
-  name                             = "cloudflare-admin"
-  description                      = "Stack to create additional cloudflare stacks and tokens"
-  branch                           = "main"
-  repository                       = "platform"
-  project_root                     = "cloudflare-token-factory"
-  terraform_version                = var.opentofu_version
-  terraform_workflow_tool          = var.terraform_workflow_tool
-  autodeploy                       = true
-  terraform_smart_sanitization     = true
-  enable_well_known_secret_masking = true
-  administrative = true  # To manage and grant tokens to other cloudflare stacks
-  labels = ["folder:component/platform"]
-}
 
-# # cloudflare-token-factory-context is manually created
-# resource "spacelift_context_attachment" "cloudflare_token_factor_context_attachment" {
-#   context_id = "cloudflare-token-factory-context"
-#   stack_id   = spacelift_stack.cloudflare_token_factory.id
-# }
+# cloudflare-admin-context is manually created
+resource "spacelift_context_attachment" "cloudflare_admin_context_attachment" {
+  context_id = "cloudflare-admin-context"
+  stack_id   = spacelift_stack.cloudflare_admin.id
+}
