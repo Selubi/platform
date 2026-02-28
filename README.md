@@ -1,2 +1,6 @@
 # platform
-EXPERIMENTAL STUFF WITH MISE AND PULUMI
+```bash
+mise i
+```
+
+https://fnox.jdx.dev/reference/environment.html#encryption-keys
