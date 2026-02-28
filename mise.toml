@@ -1,3 +1,6 @@
+[plugins]
+fnox-env = "https://github.com/jdx/mise-env-fnox"
+
 [tools]
 fnox = "latest"
 pulumi = "3.224"
@@ -6,3 +9,6 @@ uv = "0.10"
 [settings]
 lockfile = true
 python.uv_venv_auto = "create|source"
+
+[env]
+_.fnox-env = { tools = true }
