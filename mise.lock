@@ -1,0 +1,26 @@
+[[tools.fnox]]
+version = "1.14.0"
+backend = "github:jdx/fnox"
+"platforms.linux-arm64" = { checksum = "sha256:0457c0f1bf9eae7576fb86f5770a049857c15d524e78eae9c148c9bcb69d8151", url = "https://github.com/jdx/fnox/releases/download/v1.14.0/fnox-aarch64-unknown-linux-gnu.tar.gz", url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/363869177"}
+"platforms.linux-x64" = { checksum = "sha256:a54ce13d055419f97d21529b56510878e350b0fdf7392a6ff740f4aba51b08dc", url = "https://github.com/jdx/fnox/releases/download/v1.14.0/fnox-x86_64-unknown-linux-gnu.tar.gz", url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/363869189"}
+"platforms.macos-arm64" = { checksum = "sha256:cd2e732dc4564987dc2804c47a0de5ca1763b9fcf25ce6eeb10801d3b92ce5d1", url = "https://github.com/jdx/fnox/releases/download/v1.14.0/fnox-aarch64-apple-darwin.tar.gz", url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/363869181"}
+"platforms.macos-x64" = { checksum = "sha256:e84f8727c27c1dd3a263be5994953b03829c7872d61cc5fa937cb194b1eaf573", url = "https://github.com/jdx/fnox/releases/download/v1.14.0/fnox-x86_64-apple-darwin.tar.gz", url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/363869178"}
+"platforms.windows-x64" = { checksum = "sha256:9ac061518116e0897b0bd33fb45dd885c01e540cfaefe975dcaea9e97637d546", url = "https://github.com/jdx/fnox/releases/download/v1.14.0/fnox-x86_64-pc-windows-msvc.zip", url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/363869180"}
+
+[[tools.pulumi]]
+version = "3.224.0"
+backend = "aqua:pulumi/pulumi"
+"platforms.linux-arm64" = { checksum = "sha256:108bfdb95b1d3c3d7fe24d144d9682e88dc9a68e22d31091099a6408ec0c1360", url = "https://github.com/pulumi/pulumi/releases/download/v3.224.0/pulumi-v3.224.0-linux-arm64.tar.gz"}
+"platforms.linux-x64" = { checksum = "sha256:607c6f9499079966b23f506f9b22ddd9d6f1a8b726aa62942b90b289f5fb6087", url = "https://github.com/pulumi/pulumi/releases/download/v3.224.0/pulumi-v3.224.0-linux-x64.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:6c41794b1e05b857f29aff87e5360da0691ab6a6980b5e571e027e3205eda1e0", url = "https://github.com/pulumi/pulumi/releases/download/v3.224.0/pulumi-v3.224.0-darwin-arm64.tar.gz"}
+"platforms.macos-x64" = { checksum = "sha256:47cab93f9ef8064e8b70671eef442ca15f47cd5c22c2a63c8a9b7f7349775668", url = "https://github.com/pulumi/pulumi/releases/download/v3.224.0/pulumi-v3.224.0-darwin-x64.tar.gz"}
+"platforms.windows-x64" = { checksum = "sha256:5ebadf945933c8de283366575019e265baa7d6d346e2e54b7b6385c4d7c6cbec", url = "https://github.com/pulumi/pulumi/releases/download/v3.224.0/pulumi-v3.224.0-windows-x64.zip"}
+
+[[tools.uv]]
+version = "0.10.7"
+backend = "aqua:astral-sh/uv"
+"platforms.linux-arm64" = { checksum = "sha256:115291f9943531a3b63db3a2eabda8b74b8da4831551679382cb309c9debd9f7", url = "https://github.com/astral-sh/uv/releases/download/0.10.7/uv-aarch64-unknown-linux-musl.tar.gz"}
+"platforms.linux-x64" = { checksum = "sha256:992529add6024e67135b1c80617abd2eca7be2cf0b99b3911f923de815bd8dc1", url = "https://github.com/astral-sh/uv/releases/download/0.10.7/uv-x86_64-unknown-linux-musl.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:1eb4dcc5e0fc8669fa0b33cf1151b64ba3b8c26b60dceff4f7a686129e2af22b", url = "https://github.com/astral-sh/uv/releases/download/0.10.7/uv-aarch64-apple-darwin.tar.gz"}
+"platforms.macos-x64" = { checksum = "sha256:4fed9d4f4608fb3850db714ee37244436f850a2b6e485bc510795679c2d08866", url = "https://github.com/astral-sh/uv/releases/download/0.10.7/uv-x86_64-apple-darwin.tar.gz"}
+"platforms.windows-x64" = { checksum = "sha256:8881afb877996a1373a12e816395122a8d39a3ac06cd066272acdb49510cf0fe", url = "https://github.com/astral-sh/uv/releases/download/0.10.7/uv-x86_64-pc-windows-msvc.zip"}
