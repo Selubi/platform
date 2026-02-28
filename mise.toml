@@ -1,4 +1,5 @@
 [tools]
+pulumi = "3.224"
 uv = "0.10"
 
 [settings]
